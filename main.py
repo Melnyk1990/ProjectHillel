@@ -213,3 +213,28 @@ if choice == 2:
 if choice == 3:
     result = (a + b + c)/3
     print('average arithmetic:', result)
+
+
+print('*' * 10, 'TASK 2', 10 * '*')
+
+a = int(input('Enter the number of meters: '))
+
+print('''
+
+If you want to convert meters to miles then click:  1
+If you want to convert meters to inches then click: 2
+If you want to convert meters to yards then click:  3''')
+
+push = int(input('Choose what you want to see: '))
+
+if push == 1:
+    mil = a * 0.000621371           # 1 metr = 0.000621371 mil
+    print('The translation: ', mil, 'mil')
+
+if push == 2:
+    inch = a * 39.3701               # 1 metr = 39.3701 inch
+    print('The translation: ', inch, 'inch')
+
+if push == 3:
+    yard = a * 1.09361               # 1 metr = 1.09361 yard
+    print('The translation: ', yard, 'yard')
