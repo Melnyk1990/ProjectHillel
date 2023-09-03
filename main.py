@@ -142,3 +142,22 @@
 # print(not is_valid)  # not -> інверсія, якщо значення False стане True, і навпаки
 
 # print("hello" in "hello world")
+
+# hours = int(input("Enter hours: "))
+#
+# # v1
+# # if hours >= 12:
+# #     print("PM")
+# #     print("asedfasdf")
+# # else:
+# #     print("AM")
+#
+# # v2
+# if 12 <= hours < 24:
+#     print("PM")
+# elif hours >= 0 and hours < 12:
+#     print("AM")
+# else:
+#     print("Incorrect hours!")
+#
+# print("Hello world")
