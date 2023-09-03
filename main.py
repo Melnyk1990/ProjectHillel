@@ -174,3 +174,42 @@
 #         print("Not ok")
 # else:
 #     print("Incorrect rating!")
+
+print('*' * 10, 'TASK 1', 10 * '*')
+a = int(input('Enter first number: '))
+b = int(input('Enter the second number: '))
+c = int(input('Enter the third number: '))
+
+
+print('''
+          ********  MENU  ********
+If you want to see the minimum then click: 1
+If you want to see the maximum then click: 2
+If you want to see the average arithmetic then click: 3 ''')
+choice = int(input('Choose what you want to see: '))
+
+
+if a == b == c:
+    print('All numbers equals: ', a)
+
+
+if choice == 1:
+    if a <= b and a <= c:
+        print('The minimum is:', a)
+    elif b <= a and b <= c:
+        print('The minimum is:', b)
+    elif c <= a and c <= b:
+        print('The minimum is:', c)
+
+
+if choice == 2:
+    if a >= b and a >= c:
+        print('The maximum is:', a)
+    elif b >= a and b >= c:
+        print('The maximum is:', b)
+    elif c >= a and c >= b:
+        print('The maximum is:', c)
+
+if choice == 3:
+    result = (a + b + c)/3
+    print('average arithmetic:', result)
