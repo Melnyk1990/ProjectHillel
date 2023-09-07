@@ -400,3 +400,32 @@ try:
 
 except Exception as e:
     print(e)
+
+    ######################################################
+print('*' * 10, 'TASK 1', 10 * '*')
+print('Choose a day of the week:\nMonday: 1\nTuesday: 2\nWednesday: 3\nThursday: 4\nFriday: 5\nSaturday: 6\nSunday: 7')
+try:
+    nun_nedli = int(input('Enter a day of the week: '))
+    match nun_nedli:
+        case 1:
+            print('Monday')
+        case 2:
+            print('Tuesday')
+        case 3:
+            print('Wednesday')
+        case 4:
+            print('Thursday')
+        case 5:
+            print('Friday')
+        case 6:
+            print('Saturday')
+        case 7:
+            print('Sunday')
+        case _:
+            print('\t***** Incorrect input !!!!!*****')
+            print('\t***** try again *****')
+except ValueError as error:
+    print("Enter only integer numbers please!")
+    print(f"ValueError: {error}")
+except Exception as error:
+    print(f"Exception occurred: {error}")
