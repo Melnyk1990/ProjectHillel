@@ -306,3 +306,97 @@ ModuleNotFoundError: виникає при неможливості знайти
 
 OSError: тип винятків, які генеруються при виникненні помилок системи (наприклад, неможливо знайти файл,
 пам'ять диска заповнена і т.д.)
+
+#############
+###
+Цикли
+- while
+- for
+
+v1
+i = 0
+
+while i < 10:
+    print(i, end=" ")
+    i += 1  # i = i + 1
+
+
+print("test")
+
+v2
+i = 12
+
+while True:
+    print(i)
+    i += 2
+
+v3
+i = 0
+
+while True:
+    if i == 5:
+        print("continue...")
+        i += 1
+        continue  # пропустить подальші дії циклу, але цикл не зупиниться
+
+    if i >= 10:
+        print("break...")
+        break  # цикл зупиниться (повне завершення циклу)
+
+    print(i)
+    i += 1
+
+print("After while")
+
+####################
+##
+Користувач вводить з клавіатури числа
+якщо користувач ввів 0 -> припинити введення чисел
+в кінці вивести середню арифметичну числову послідовність
+
+sum_numbers = 0
+numbers_count = 0
+
+while True:
+    user_number = int(input("Enter number: "))
+
+    if user_number == 0:
+        print("end...")
+        break
+
+    sum_numbers += user_number
+    numbers_count += 1
+
+print(f"Sum: {sum_numbers}")
+average = sum_numbers / numbers_count
+print(f"Average: {average}")
+
+###
+sum_num = 0
+count = 0
+
+try:
+    while True:
+        try:
+            num = int(input("Enter number: "))
+
+            if num == 0 and count == 0:
+                print("Please enter a number")
+                continue
+
+            if num == 0:
+                print("end...")
+                break
+
+            sum_num += num
+            count += 1
+        except ValueError as e:
+            print("Enter numbers only")
+
+    average = sum_num / count
+    print(f"sum num: {sum_num}")
+    print(f"count: {count}")
+    print(f"average: {average}")
+
+except Exception as e:
+    print(e)
