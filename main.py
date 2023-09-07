@@ -448,3 +448,35 @@ except Exception as error:
         print(f'ValueError, {error}')
     except Exception as error:
         print(f'Exception occurred: {error}')
+
+
+print('*' * 10, 'TASK 3', 10 * '*')
+try:
+    user_number1 = int(input('Enter the first number: '))
+    user_number2 = int(input('Enter the second number: '))
+    print('''Enter action: /
+              *
+              -
+              +''')
+    mathematical_action = input('Enter the mathematical action: ')
+    if mathematical_action == '/':
+        division = user_number1/user_number2
+        print(division)
+    elif mathematical_action == '*':
+        multiplication = user_number1 * user_number2
+        print(multiplication)
+    elif mathematical_action == '-':
+        difference = user_number1 - user_number2
+        print(difference)
+    elif mathematical_action == '+':
+        addition = user_number1 + user_number2
+        print(addition)
+    else:
+        print('Please enter action: (/) or (*) or (-) or (+)')
+except ZeroDivisionError as error:
+    print(f"ZeroDivisionError occurred: {error}")
+except ValueError as error:
+    print('Enter only iteger numbers please!')
+    print(f'ValueError, {error}')
+except Exception as error:
+    print(f'Exception occurred: {error}')
