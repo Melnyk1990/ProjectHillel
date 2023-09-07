@@ -429,3 +429,22 @@ except ValueError as error:
     print(f"ValueError: {error}")
 except Exception as error:
     print(f"Exception occurred: {error}")
+
+    print('*' * 10, 'TASK 2', 10 * '*')
+    try:
+        user_number1 = int(input('Enter the first number: '))
+        user_number2 = int(input(('Enter the second number: ')))
+
+        if user_number1 == user_number2:
+            print('Numbers equal')
+        elif user_number1 > user_number2:
+            print(user_number2)
+            print(user_number1)
+        else:
+            print(user_number1)
+            print(user_number2)
+    except ValueError as error:
+        print('Enter only iteger numbers please!')
+        print(f'ValueError, {error}')
+    except Exception as error:
+        print(f'Exception occurred: {error}')
