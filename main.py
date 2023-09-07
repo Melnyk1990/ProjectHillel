@@ -238,3 +238,33 @@ if push == 2:
 if push == 3:
     yard = a * 1.09361               # 1 metr = 1.09361 yard
     print('The translation: ', yard, 'yard')
+
+#Обробка винятків
+
+v1
+n1, n2 = 10, 0  # множинне привласнення
+print(n1 / n2)
+
+num = float(input("Enter the number: "))
+print(num)
+print(int(num))
+
+v2
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    result = num1 / num2
+
+    print(f"Result: {result}")
+except ZeroDivisionError as error:
+    print(f"ZeroDivisionError occurred: {error}")
+except ValueError as error:
+    print("Enter only integer numbers please!")
+    print(f"ValueError: {error}")
+except Exception as error:  # Exception -> базовий тип виключення пишемо останнім з except
+    print(f"Exception occurred: {error}")
+finally:  # Відпрацьовує завжди. Писати по потребі
+    print("End of calculation")
+
+print("some text")
